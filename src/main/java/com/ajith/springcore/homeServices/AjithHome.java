@@ -1,9 +1,12 @@
 package com.ajith.springcore.homeServices;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class AjithHome {
 	
+	@Autowired
+	@Qualifier("BikeService")
 	private Service service;
 	
 	public AjithHome() {
@@ -14,8 +17,7 @@ public class AjithHome {
 		this.service = service;
 	}
 	
-	
-	@Autowired
+
 	public void setService (Service service) {
 		this.service = service;
 	}
