@@ -10,14 +10,6 @@
 
     	>
 
-		<context:annotation-config></context:annotation-config>
-	
-	    <bean id="service" class="com.ajith.springcore.homeServices.BikeService" ></bean>
-	    <bean id="service" class="com.ajith.springcore.homeServices.CarService"></bean>
-
-    	<bean class="com.ajith.springcore.homeServices.AjithHome" name="ajithHome">
-    		
-    	</bean>
 
 
 </beans>

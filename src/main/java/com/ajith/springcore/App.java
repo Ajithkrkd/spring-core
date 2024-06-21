@@ -1,10 +1,8 @@
 package com.ajith.springcore;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import com.ajith.springcore.homeServices.AjithHome;
-import com.ajith.springcore.sims.Airtel;
+import com.ajith.springcore.SchoolManagement.IstudentDao;
+import com.ajith.springcore.SchoolManagement.Student;
+import com.ajith.springcore.SchoolManagement.StudentDao;
 
 /**
  * Hello world!
@@ -14,9 +12,10 @@ public class App
 {
     public static void main( String[] args )
     {
-    	ApplicationContext context = new  ClassPathXmlApplicationContext("beans.xml");
-    	System.out.println("application loaded");
-    	AjithHome home = context.getBean("ajithHome",AjithHome.class);
-    	home.iNeedService();
+    	Student studentOne = new Student( 1,"ajith","8921187983");
+    	
+    	IstudentDao studentDao = new StudentDao();
+    	studentDao.saveStudent(studentOne);
+    	System.out.println("Student inserted successfully");
     }
 }
